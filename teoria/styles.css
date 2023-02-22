@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+.padre__fd {
+    background-color: lightseagreen;
+    height: 500px;
+
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+}
+
+.padre__fd .hijo {
+    background-color: lightblue;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.padre__fw {
+    background-color: lightseagreen;
+    height: 500px;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    /* flex-wrap: nowrap; por defecto */
+    flex-wrap: wrap;
+}
+
+.padre__fw .hijo {
+    width: 100px;
+    background-color: lightblue;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.padre__fja {
+    background-color: lightseagreen;
+    height: 500px;
+
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
+
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.padre__fja .hijo {
+    width: 100px;
+    background-color: lightblue;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.padre__fc {
+    background-color: lightseagreen;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.padre__fc .hijo {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.padre__as {
+    background-color: lightseagreen;
+    height: 500px;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padre__as .hijo {
+    width: 100px;
+    background-color: lightblue;
+    border: 1px solid red;
+    border-radius: 5px;
+
+    /* centrado perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padre__as .hijo:nth-child(1) {
+    align-self: stretch;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    width: 500px;
+    /* flex-basis: 500px; */
+    order: 2;
+}
+
+.padre__as .hijo:nth-child(2) {
+    align-self: center;
+    align-self: stretch;
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    width: 500px;
+    /* flex-basis: 500px; */
+    order: 3;
+}
+
+.padre__as .hijo:nth-child(3) {
+    align-self: flex-end;
+    align-self: stretch;
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+    width: 500px;
+    /* flex-basis: 500px; */
+    order: 1;
+}
